@@ -65,3 +65,56 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.navigationTabContents {
+  display: none;
+}
+
+.navigationBarSelector
+  input[type="radio"]:nth-child(1):checked
+  ~ .navigationBodyPages
+  > .navigationTabContents:nth-child(1),
+.navigationBarSelector
+  input[type="radio"]:nth-child(2):checked
+  ~ .navigationBodyPages
+  > .navigationTabContents:nth-child(2),
+.navigationBarSelector
+  input[type="radio"]:nth-child(3):checked
+  ~ .navigationBodyPages
+  > .navigationTabContents:nth-child(3) {
+  display: block;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.navigationButtons {
+  justify-content: center;
+}
+
+.navigationButtons label {
+  margin: 0;
+  white-space: nowrap;
+  margin-right: 3px;
+  border-radius: 0.3em 0.3em 0 0;
+  border: #000;
+  background-color: #222;
+  font-size: 2em;
+}
+
+.navigationBarSelector
+  input[type="radio"]:nth-child(1):checked
+  ~ .navigationButtons
+  > label:nth-child(1),
+.navigationBarSelector
+  input[type="radio"]:nth-child(2):checked
+  ~ .navigationButtons
+  > label:nth-child(2),
+.navigationBarSelector
+  input[type="radio"]:nth-child(3):checked
+  ~ .navigationButtons
+  > label:nth-child(3) {
+  background-color: #fff;
+  color: #000;
+}
